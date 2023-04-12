@@ -1,0 +1,56 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-12 00:00 MSK
+Nmap scan report for 10.10.11.202
+Host is up (0.064s latency).
+Not shown: 988 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2023-04-12 05:01:17Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: sequel.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=dc.sequel.htb
+| Subject Alternative Name: othername:<unsupported>, DNS:dc.sequel.htb
+| Not valid before: 2022-11-18T21:20:35
+|_Not valid after:  2023-11-18T21:20:35
+|_ssl-date: 2023-04-12T05:02:39+00:00; +8h00m01s from scanner time.
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: sequel.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2023-04-12T05:02:39+00:00; +8h00m01s from scanner time.
+| ssl-cert: Subject: commonName=dc.sequel.htb
+| Subject Alternative Name: othername:<unsupported>, DNS:dc.sequel.htb
+| Not valid before: 2022-11-18T21:20:35
+|_Not valid after:  2023-11-18T21:20:35
+1433/tcp open  ms-sql-s      Microsoft SQL Server 2019 15.00.2000.00; RTM
+|_ssl-date: 2023-04-12T05:02:39+00:00; +8h00m01s from scanner time.
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2023-04-11T12:09:12
+|_Not valid after:  2053-04-11T12:09:12
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: sequel.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=dc.sequel.htb
+| Subject Alternative Name: othername:<unsupported>, DNS:dc.sequel.htb
+| Not valid before: 2022-11-18T21:20:35
+|_Not valid after:  2023-11-18T21:20:35
+|_ssl-date: 2023-04-12T05:02:39+00:00; +8h00m01s from scanner time.
+3269/tcp open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: sequel.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2023-04-12T05:02:39+00:00; +8h00m01s from scanner time.
+| ssl-cert: Subject: commonName=dc.sequel.htb
+| Subject Alternative Name: othername:<unsupported>, DNS:dc.sequel.htb
+| Not valid before: 2022-11-18T21:20:35
+|_Not valid after:  2023-11-18T21:20:35
+Service Info: Host: DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-04-12T05:02:02
+|_  start_date: N/A
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled and required
+|_clock-skew: mean: 8h00m00s, deviation: 0s, median: 8h00m00s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 137.73 seconds
